@@ -2,20 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piece : MonoBehaviour {
+namespace Checkers
+{
+    public class Piece : MonoBehaviour
+    {
+        
+        public int x, y;
 
-    public bool isWhite, isKing;
+        public bool isWhite;
+        public bool isKing;
 
-    public int x, y;
+        private Animator anim;
 
+        // Use this for initialization
+        void Start()
+        {
+            anim = GetComponentInChildren<Animator>();
+        }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        
+        public void King()
+        {
+            isKing = true;
+
+            anim.SetTrigger("King");
+
+        }
+    } 
 }
