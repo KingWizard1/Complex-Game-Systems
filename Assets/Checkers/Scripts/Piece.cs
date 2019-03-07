@@ -4,29 +4,48 @@ using UnityEngine;
 
 namespace Checkers
 {
+
     public class Piece : MonoBehaviour
     {
-        
-        public int x, y;
 
-        public bool isWhite;
-        public bool isKing;
+        public bool isWhite, isKing;
+
+        public Vector2Int cell, oldCell;
+
+        
 
         private Animator anim;
 
-        // Use this for initialization
-        void Start()
+        // ------------------------------------------------- //
+
+        void Awake()
         {
-            anim = GetComponentInChildren<Animator>();
+
+            anim = GetComponent<Animator>();
+
+        }
+        
+        // ------------------------------------------------- //
+
+        void Update()
+        {
+
         }
 
-        
+        // ------------------------------------------------- //
+
         public void King()
         {
+            // Set new state
             isKing = true;
 
+            // Trigger kinged animation
             anim.SetTrigger("King");
 
         }
-    } 
+
+        // ------------------------------------------------- //
+
+    }
+
 }
