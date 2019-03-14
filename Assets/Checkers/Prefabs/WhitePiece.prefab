@@ -143,3 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3169ffdb177cf014daf9952d30e226d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWhite: 1
+  isKing: 0
+  cell: {x: 0, y: 0}
+  oldCell: {x: 0, y: 0}
